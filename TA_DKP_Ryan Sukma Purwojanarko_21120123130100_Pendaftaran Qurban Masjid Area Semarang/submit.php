@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </header>
             <div class='container'>
                 <h2>Terima Kasih, " . $registration->getName() . "!</h2>
-                <p>Anda telah berhasil mendaftar qurban 1445 Hijriah. Silahkan datang pada tanggal 17 Juni 2024 ditempat yang sudah anda pilih  </p>
+                <p>Anda telah berhasil mendaftar qurban 1445 Hijriah. Silahkan datang pada tanggal 17 Juni 2024 ditempat yang sudah anda pilih</p>
                 " . $registration->displayDetails() . "
             </div>
             <footer>
