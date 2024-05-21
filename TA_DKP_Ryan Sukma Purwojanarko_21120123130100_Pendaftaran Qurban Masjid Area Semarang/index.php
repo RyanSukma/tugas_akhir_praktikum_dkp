@@ -28,24 +28,27 @@
                 <option value="Domba">Domba</option>
             </select>
 
+            <label for="quantity">Jumlah Hewan Qurban:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
             <label for="mosque">Pilih Tempat Qurban:</label>
             <select id="mosque" name="mosque" required>
-                <option value="Masjid Muhajirin">Masjid Muhajirin,Kec.Banyumanik</option>
-                <option value="Masjid Baiturrahman">Masjid Baiturrahman,Kec.Semarang Tengah</option>
-                <option value="Masjid Al-Ijtihhad">Masjid Al-Ijtihad,Kec.Candisari</option>
-                <option value="Masjid Agung Jawa Tengah">Masjid Agung Jawa Tengah,Kec.Gayamsari</option>
-                <option value="Masjid Al-Huda">Masjid Al-Huda,Kec.Gajahmungkur</option>
-                <option value="Masjid Al-Falah">Masjid Al-Falah,Kec.Genuk</option>
-                <option value="Masjid Baitul Muttaqin">Masjid Baitul Muttaqin,Kec.Gunungpati</option>
-                <option value="Masjid Ulil Albab">Masjid Ulil Albab,Kec.Mijen</option>
-                <option value="Masjid Al-Iman">Masjid Al-Iman,Kec.Ngaliyan</option>
-                <option value="Masjid Al-Amien">Masjid Al-Amien,Kec.Pedurungan</option>
-                <option value="Masjid Muawanah">Masjid Muawanah,Kec.Semarang Selatan</option>
-                <option value="Masjid Baitul Atiq">Masjid Baitul Atiq,Kec.Semarang Barat</option>
-                <option value="Masjid Al-Jannah">Masjid Al-Jannah,Kec.Semarang Timur</option>
-                <option value="Masjid Az-Zahra">Masjid Az-Zahra,Kec.Semarang Utara</option>
-                <option value="Masjid Kampus Undip">Masjid Kampus Undip,Kec.Tembalang</option>
-                <option value="Masjid Baitussalam">Masjid Baitussalam,Kec.Tugu</option>
+                <option value="Masjid Muhajirin">Masjid Muhajirin, Kec. Banyumanik</option>
+                <option value="Masjid Baiturrahman">Masjid Baiturrahman, Kec. Semarang Tengah</option>
+                <option value="Masjid Al-Ijtihhad">Masjid Al-Ijtihad, Kec. Candisari</option>
+                <option value="Masjid Agung Jawa Tengah">Masjid Agung Jawa Tengah, Kec. Gayamsari</option>
+                <option value="Masjid Al-Huda">Masjid Al-Huda, Kec. Gajahmungkur</option>
+                <option value="Masjid Al-Falah">Masjid Al-Falah, Kec. Genuk</option>
+                <option value="Masjid Baitul Muttaqin">Masjid Baitul Muttaqin, Kec. Gunungpati</option>
+                <option value="Masjid Ulil Albab">Masjid Ulil Albab, Kec. Mijen</option>
+                <option value="Masjid Al-Iman">Masjid Al-Iman, Kec. Ngaliyan</option>
+                <option value="Masjid Al-Amien">Masjid Al-Amien, Kec. Pedurungan</option>
+                <option value="Masjid Muawanah">Masjid Muawanah, Kec. Semarang Selatan</option>
+                <option value="Masjid Baitul Atiq">Masjid Baitul Atiq, Kec. Semarang Barat</option>
+                <option value="Masjid Al-Jannah">Masjid Al-Jannah, Kec. Semarang Timur</option>
+                <option value="Masjid Az-Zahra">Masjid Az-Zahra, Kec. Semarang Utara</option>
+                <option value="Masjid Kampus Undip">Masjid Kampus Undip, Kec. Tembalang</option>
+                <option value="Masjid Baitussalam">Masjid Baitussalam, Kec. Tugu</option>
             </select>
 
             <button type="submit">Daftar</button>
