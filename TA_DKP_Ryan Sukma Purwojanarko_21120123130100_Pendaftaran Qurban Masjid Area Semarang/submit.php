@@ -8,7 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_POST['phone'],
             $_POST['animal'],
             $_POST['mosque'],
-            $_POST['address']
+            $_POST['address'],
+            $_POST['quantity']
         );
 
         echo "<!DOCTYPE html>
