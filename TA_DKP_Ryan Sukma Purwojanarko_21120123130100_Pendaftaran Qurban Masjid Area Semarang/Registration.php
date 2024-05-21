@@ -5,23 +5,27 @@ class Registration {
     private $animal;
     private $mosque;
     private $address;
+    private $quantity; 
 
-    
-    public function __construct($name, $phone, $animal, $mosque, $address) {
+    public function __construct($name, $phone, $animal, $mosque, $address, $quantity) {
         $this->setName($name);
         $this->setPhone($phone);
         $this->setAnimal($animal);
         $this->setMosque($mosque);
         $this->setAddress($address);
+        $this->setQuantity($quantity); 
     }
 
-   
     public function getName() {
         return $this->name;
     }
 
     public function setName($name) {
-        $this->name = htmlspecialchars($name);
+        if ($this->validateName($name)) {
+            $this->name = htmlspecialchars($name);
+        } else {
+            throw new Exception("Nama hanya boleh mengandung huruf.");
+        }
     }
 
     public function getPhone() {
@@ -32,7 +36,7 @@ class Registration {
         if ($this->validatePhone($phone)) {
             $this->phone = htmlspecialchars($phone);
         } else {
-            throw new Exception("Invalid phone number.");
+            throw new Exception("Nomor handphone tidak valid.");
         }
     }
 
@@ -60,17 +64,38 @@ class Registration {
         $this->address = htmlspecialchars($address);
     }
 
+    public function getQuantity() {
+        return $this->quantity;
+    }
+
+    public function setQuantity($quantity) {
+        if ($this->validateQuantity($quantity)) {
+            $this->quantity = $quantity;
+        } else {
+            throw new Exception("Jumlah hewan qurban tidak valid.");
+        }
+    }
+
+    private function validateName($name) {
+        return ctype_alpha(str_replace(' ', '', $name));
+    }
+
     private function validatePhone($phone) {
         return is_numeric($phone) && strlen($phone) >= 10 && strlen($phone) <= 13;
+    }
+
+    private function validateQuantity($quantity) {
+        return is_numeric($quantity) && $quantity > 0;
     }
 
     public function displayDetails() {
         return "
             <p><strong>Nama:</strong> {$this->getName()}</p>
             <p><strong>Nomor HP:</strong> {$this->getPhone()}</p>
-            <p><strong>Alamat:</strong> {$this->getAddress()}</p>
             <p><strong>Hewan Qurban:</strong> {$this->getAnimal()}</p>
-            <p><strong>Tempat Penyembelihan:</strong> {$this->getMosque()}</p>
+            <p><strong>Jumlah Hewan Qurban:</strong> {$this->getQuantity()}</p>
+            <p><strong>Masjid:</strong> {$this->getMosque()}</p>
+            <p><strong>Alamat:</strong> {$this->getAddress()}</p>
         ";
     }
 }
