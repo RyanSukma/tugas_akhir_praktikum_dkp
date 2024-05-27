@@ -27,6 +27,9 @@ class Registration {
             throw new Exception("Nama hanya boleh mengandung huruf.");
         }
     }
+    private function validateName($name) {
+        return ctype_alpha(str_replace(' ', '', $name));
+    }
 
     public function getPhone() {
         return $this->phone;
@@ -39,7 +42,10 @@ class Registration {
             throw new Exception("Nomor handphone tidak valid.");
         }
     }
-
+    private function validatePhone($phone) {
+        return is_numeric($phone) && strlen($phone) >= 10 && strlen($phone) <= 13;
+    }
+    
     public function getAnimal() {
         return $this->animal;
     }
@@ -74,14 +80,6 @@ class Registration {
         } else {
             throw new Exception("Jumlah hewan qurban tidak valid.");
         }
-    }
-
-    private function validateName($name) {
-        return ctype_alpha(str_replace(' ', '', $name));
-    }
-
-    private function validatePhone($phone) {
-        return is_numeric($phone) && strlen($phone) >= 10 && strlen($phone) <= 13;
     }
 
     private function validateQuantity($quantity) {
